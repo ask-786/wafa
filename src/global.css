@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+@import 'uniwind';
+@import 'tw-animate-css';
+
+/*
+ * Wafa: playful, warm, gentle.
+ *
+ * - Cream paper by day, a night sky by night.
+ * - Each prayer wears the colour of its hour: Fajr dawn pink, Dhuhr noon sun,
+ *   Asr afternoon orange, Maghrib sunset coral, Isha night indigo, Witr teal.
+ *   Every hue comes in three tones: the colour itself, a soft wash for the
+ *   surface behind it, and a darker "edge" for the 3D lip of chunky buttons.
+ * - Nunito, one family per weight: Android won't synthesise weights for a
+ *   custom font, so we pick the face rather than set font-weight.
+ */
+
+@theme {
+  --radius: 18px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 30px;
+
+  --spacing-hairline: hairlineWidth();
+
+  --font-body: 'Nunito_500Medium';
+  --font-strong: 'Nunito_700Bold';
+  --font-heavy: 'Nunito_800ExtraBold';
+  --font-display: 'Nunito_900Black';
+}
+
+@layer theme {
+  :root {
+    @variant light {
+      --color-background: #fff8ec;
+      --color-foreground: #1e2433;
+      --color-card: #ffffff;
+      --color-card-foreground: #1e2433;
+      --color-popover: #ffffff;
+      --color-popover-foreground: #1e2433;
+
+      --color-primary: #16b47e;
+      --color-primary-foreground: #ffffff;
+      --color-primary-edge: #0e8f63;
+      --color-secondary: #e3f7ee;
+      --color-secondary-foreground: #0e7a55;
+
+      --color-muted: #f5eddf;
+      --color-muted-foreground: #7a7286;
+      --color-accent: #fff1c9;
+      --color-accent-foreground: #8a5a00;
+      --color-sun: #ffc93c;
+
+      --color-destructive: #ef4e5b;
+      --color-destructive-edge: #c93441;
+
+      --color-border: #eee3d0;
+      --color-input: #e8dcc8;
+      --color-ring: #16b47e;
+      --color-edge: #e6d9c2;
+
+      --color-fajr: #f472b6;
+      --color-fajr-soft: #fde7f3;
+      --color-fajr-edge: #d9579c;
+      --color-dhuhr: #f5b40b;
+      --color-dhuhr-soft: #fff4cc;
+      --color-dhuhr-edge: #d49405;
+      --color-asr: #fb8a3c;
+      --color-asr-soft: #ffeadb;
+      --color-asr-edge: #db6c20;
+      --color-maghrib: #f25c54;
+      --color-maghrib-soft: #ffe3e1;
+      --color-maghrib-edge: #cf3f38;
+      --color-isha: #6366f1;
+      --color-isha-soft: #e6e7fe;
+      --color-isha-edge: #4b4fd6;
+      --color-witr: #14b8a6;
+      --color-witr-soft: #d5f7f2;
+      --color-witr-edge: #0e9384;
+    }
+
+    @variant dark {
+      --color-background: #12131f;
+      --color-foreground: #f4f1ea;
+      --color-card: #1c1e2e;
+      --color-card-foreground: #f4f1ea;
+      --color-popover: #222538;
+      --color-popover-foreground: #f4f1ea;
+
+      --color-primary: #34d399;
+      --color-primary-foreground: #052e1f;
+      --color-primary-edge: #1e9e70;
+      --color-secondary: #153a2e;
+      --color-secondary-foreground: #6ee7b7;
+
+      --color-muted: #24273a;
+      --color-muted-foreground: #a3a0b8;
+      --color-accent: #3a2f12;
+      --color-accent-foreground: #ffd66b;
+      --color-sun: #fbc93d;
+
+      --color-destructive: #f87171;
+      --color-destructive-edge: #c24848;
+
+      --color-border: #2d3047;
+      --color-input: #33364f;
+      --color-ring: #34d399;
+      --color-edge: #0b0c15;
+
+      --color-fajr: #f78bc4;
+      --color-fajr-soft: #3a1e31;
+      --color-fajr-edge: #c25a93;
+      --color-dhuhr: #fbc93d;
+      --color-dhuhr-soft: #3a3012;
+      --color-dhuhr-edge: #c89a1e;
+      --color-asr: #fd9f5e;
+      --color-asr-soft: #3d2618;
+      --color-asr-edge: #c9733a;
+      --color-maghrib: #f7766f;
+      --color-maghrib-soft: #3e1f22;
+      --color-maghrib-edge: #c4504a;
+      --color-isha: #8b8df9;
+      --color-isha-soft: #24254a;
+      --color-isha-edge: #6366d6;
+      --color-witr: #2dd4bf;
+      --color-witr-soft: #133a36;
+      --color-witr-edge: #1a9c8c;
+    }
+  }
+}

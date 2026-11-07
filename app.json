@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Wafa",
+    "slug": "wafa",
+    "scheme": "wafa",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.ask.wafa"
+    },
+    "android": {
+      "package": "com.ask.wafa",
+      "adaptiveIcon": {
+        "backgroundColor": "#16B47E",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFF8EC",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#12131F"
+          }
+        }
+      ],
+      "expo-status-bar",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
