@@ -30,6 +30,55 @@
   --font-display: 'Nunito_900Black';
 }
 
+/*
+ * Registers every theme colour with Tailwind up front (`bg-card`, `text-fajr`, ...).
+ * Uniwind does the same into node_modules once Metro runs, but tooling that
+ * runs without Metro (the Prettier class sorter in CI) needs it here.
+ * The real values are set per theme below.
+ */
+@theme {
+  --color-background: unset;
+  --color-foreground: unset;
+  --color-card: unset;
+  --color-card-foreground: unset;
+  --color-popover: unset;
+  --color-popover-foreground: unset;
+  --color-primary: unset;
+  --color-primary-foreground: unset;
+  --color-primary-edge: unset;
+  --color-secondary: unset;
+  --color-secondary-foreground: unset;
+  --color-muted: unset;
+  --color-muted-foreground: unset;
+  --color-accent: unset;
+  --color-accent-foreground: unset;
+  --color-sun: unset;
+  --color-destructive: unset;
+  --color-destructive-edge: unset;
+  --color-border: unset;
+  --color-input: unset;
+  --color-ring: unset;
+  --color-edge: unset;
+  --color-fajr: unset;
+  --color-fajr-soft: unset;
+  --color-fajr-edge: unset;
+  --color-dhuhr: unset;
+  --color-dhuhr-soft: unset;
+  --color-dhuhr-edge: unset;
+  --color-asr: unset;
+  --color-asr-soft: unset;
+  --color-asr-edge: unset;
+  --color-maghrib: unset;
+  --color-maghrib-soft: unset;
+  --color-maghrib-edge: unset;
+  --color-isha: unset;
+  --color-isha-soft: unset;
+  --color-isha-edge: unset;
+  --color-witr: unset;
+  --color-witr-soft: unset;
+  --color-witr-edge: unset;
+}
+
 @layer theme {
   :root {
     @variant light {
