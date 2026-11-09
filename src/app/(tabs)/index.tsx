@@ -142,11 +142,14 @@ export default function HomeScreen() {
                     prayers left to repay
                   </Text>
                   {plan.finish ? (
-                    <View className="mt-2 flex-row items-center gap-1.5 self-start rounded-full bg-white/20 px-3 py-1">
+                    <View className="mt-2 max-w-full flex-row items-center gap-1.5 self-start rounded-full bg-white/20 px-3 py-1">
                       <Icon as={CalendarCheckIcon} className="size-3.5 text-primary-foreground" />
-                      <Text className="font-strong text-xs text-primary-foreground">
+                      <Text className="shrink font-strong text-xs text-primary-foreground">
                         {plan.basis === 'target' ? 'On target: ' : 'At your pace: '}
-                        {dayjs(plan.finish).format(plan.daysLeft! < 60 ? 'D MMM' : 'MMM YYYY')}
+                        {/* Non-breaking space: wrap before the date, never inside it. */}
+                        {dayjs(plan.finish).format(
+                          plan.daysLeft! < 60 ? 'D\u00A0MMM' : 'MMM\u00A0YYYY',
+                        )}
                       </Text>
                     </View>
                   ) : null}
